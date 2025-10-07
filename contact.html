@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Café Nova - Contact</title>
+  <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap' rel='stylesheet'>
+  <script src='https://cdn.tailwindcss.com'></script>
+  <style>
+    .glass { background: rgba(255,255,255,0.6); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border:1px solid rgba(255,255,255,0.5); padding:1rem; border-radius:0.75rem; }
+    @keyframes fadeInUp { from { opacity:0; transform: translateY(20px);} to { opacity:1; transform: translateY(0);} }
+    .load-animate { opacity:0; transform: translateY(20px); transition: all 600ms ease-out; }
+    .load-animate.is-visible { opacity:1; transform: translateY(0); }
+  </style>
+</head>
+<body class='bg-gray-100' style='font-family: Inter, ui-sans-serif;'>
+  <header class='w-full sticky top-0'>
+    <nav class='glass mx-4 md:mx-8 my-2 rounded-lg shadow-md flex items-center justify-between px-4 py-3' aria-label='Main navigation'>
+      <div class='flex items-center space-x-3'>
+        <span class='text-xl font-bold text-primary'>Café Nova</span>
+      </div>
+      <ul class='hidden md:flex items-center space-x-6'>
+        <li><a href='index.html' class='text-sm text-gray-700 hover:text-primary transition'>Home</a></li>
+        <li><a href='menu.html' class='text-sm text-gray-700 hover:text-primary transition'>Menu</a></li>
+        <li><a href='locations.html' class='text-sm text-gray-700 hover:text-primary transition'>Locations</a></li>
+        <li><a href='about.html' class='text-sm text-gray-700 hover:text-primary transition'>About</a></li>
+        <li><a href='gallery.html' class='text-sm text-gray-700 hover:text-primary transition'>Gallery</a></li>
+        <li><a href='contact.html' class='text-sm text-primary'>Contact</a></li>
+      </ul>
+      <a href='order.html' class='bg-primary text-white px-4 py-2 rounded-lg hover:scale-105 transition'>Order</a>
+    </nav>
+  </header>
+
+  <main class='container mx-auto px-4 py-8'>
+    <section class='mb-6'>
+      <h1 class='text-3xl font-semibold mb-2'>Contact & Newsletter</h1>
+      <p class='text-gray-600'>Have a question or want to stay in the loop? Join our newsletter or send us a message.</p>
+    </section>
+
+    <section class='grid grid-cols-1 lg:grid-cols-2 gap-6'>
+      <form class='glass p-4' aria-label='Contact form'>
+        <div class='mb-4'>
+          <label for='name' class='block text-sm text-gray-600 mb-1'>Name</label>
+          <input id='name' type='text' class='w-full p-2 border rounded' placeholder='Your name' />
+        </div>
+        <div class='mb-4'>
+          <label for='email' class='block text-sm text-gray-600 mb-1'>Email</label>
+          <input id='email' type='email' class='w-full p-2 border rounded' placeholder='you@example.com' />
+        </div>
+        <div class='mb-4'>
+          <label for='message' class='block text-sm text-gray-600 mb-1'>Message</label>
+          <textarea id='message' rows='4' class='w-full p-2 border rounded' placeholder='Your message...'></textarea>
+        </div>
+        <button type='button' class='bg-primary text-white px-4 py-2 rounded hover:scale-105 transition'>Send Message</button>
+      </form>
+      <aside class='glass p-4'>
+        <h3 class='font-semibold mb-2'>Newsletter</h3>
+        <p class='text-sm text-gray-600 mb-3'>Get exclusive updates and specials. Unsubscribe anytime.</p>
+        <div class='flex'>
+          <input type='email' placeholder='Email address' class='flex-1 p-2 border rounded-l' />
+          <button class='bg-primary text-white px-4 py-2 rounded-r'>Join</button>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class='bg-white mt-6 border-t'>
+    <div class='container mx-auto px-4 py-6 text-center text-sm text-gray-500'>© 2025 Café Nova. All rights reserved.</div>
+  </footer>
+
+  <script src='script.js'></script>
+</body>
+</html>
