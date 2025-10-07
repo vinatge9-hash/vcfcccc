@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Café Nova - Locations</title>
+  <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap' rel='stylesheet'>
+  <script src='https://cdn.tailwindcss.com'></script>
+  <style>
+    .glass { background: rgba(255,255,255,0.6); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.5); padding: 1rem; border-radius: 0.75rem; }
+    @keyframes fadeInUp { from { opacity:0; transform: translateY(20px);} to { opacity:1; transform: translateY(0);} }
+    .load-animate { opacity:0; transform: translateY(20px); transition: all 600ms ease-out; }
+    .load-animate.is-visible { opacity:1; transform: translateY(0); }
+  </style>
+</head>
+<body class='bg-gray-100' style='font-family: Inter, ui-sans-serif;'>
+  <header class='w-full sticky top-0'>
+    <nav class='glass mx-4 md:mx-8 my-2 rounded-lg shadow-md flex items-center justify-between px-4 py-3' aria-label='Main navigation'>
+      <div class='flex items-center space-x-3'>
+        <span class='text-xl font-bold text-primary'>Café Nova</span>
+      </div>
+      <ul class='hidden md:flex items-center space-x-6'>
+        <li><a href='index.html' class='text-sm text-gray-700 hover:text-primary transition'>Home</a></li>
+        <li><a href='menu.html' class='text-sm text-gray-700 hover:text-primary transition'>Menu</a></li>
+        <li><a href='locations.html' class='text-sm text-primary'>Locations</a></li>
+        <li><a href='about.html' class='text-sm text-gray-700 hover:text-primary transition'>About</a></li>
+        <li><a href='gallery.html' class='text-sm text-gray-700 hover:text-primary transition'>Gallery</a></li>
+        <li><a href='contact.html' class='text-sm text-gray-700 hover:text-primary transition'>Contact</a></li>
+      </ul>
+      <a href='order.html' class='bg-primary text-white px-4 py-2 rounded-lg hover:scale-105 transition'>Order</a>
+    </nav>
+  </header>
+
+  <main class='container mx-auto px-4 py-8'>
+    <section class='mb-6'>
+      <h1 class='text-3xl font-semibold mb-2'>Locations</h1>
+      <p class='text-gray-600'>Visit our cafe in person. Open daily with friendly service.</p>
+    </section>
+
+    <section class='grid grid-cols-1 lg:grid-cols-2 gap-6'>
+      <div class='glass'>
+        <h2 class='font-semibold mb-2'>Downtown</h2>
+        <p>123 Main Street, Cityville</p>
+        <p>Hours: Mon-Sun 7:00 - 20:00</p>
+        <p>Phone: (555) 123-4567</p>
+      </div>
+      <div class='glass'>
+        <h2 class='font-semibold mb-2'>Riverside</h2>
+        <p>88 Riverwalk Ave, Cityville</p>
+        <p>Hours: Mon-Sun 8:00 - 21:00</p>
+        <p>Phone: (555) 987-6543</p>
+      </div>
+    </section>
+
+    <section class='mt-6'>
+      <div class='w-full h-64 bg-gray-200 rounded-lg overflow-hidden'>
+        <!-- Placeholder map -->
+        <iframe title='Map' width='100%' height='100%' frameborder='0' style='border:0' src='https://www.google.com/maps?q=Cafe%20Nova%20Cityville&output=embed' allowfullscreen></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class='bg-white mt-6 border-t'>
+    <div class='container mx-auto px-4 py-6 text-center text-sm text-gray-500'>
+      © 2025 Café Nova. All rights reserved.
+    </div>
+  </footer>
+
+  <script src='script.js'></script>
+</body>
+</html>
