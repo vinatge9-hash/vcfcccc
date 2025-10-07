@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Café Nova - Home</title>
+  <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap' rel='stylesheet'>
+  <script src='https://cdn.tailwindcss.com'></script>
+  <style>
+    :root {
+      --primary: #2563EB;
+      --secondary: #7C3AED;
+      --accent: #F59E0B;
+      --bg: #F1F5F9;
+      --surface: #FFFFFF;
+      --text: #0F172A;
+      --text-secondary: #475569;
+      --glass: rgba(255,255,255,0.6);
+    }
+    .glass {
+      background: var(--glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.5);
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .load-animate { opacity: 0; transform: translateY(20px); transition: all 600ms ease-out; }
+    .load-animate.is-visible { opacity: 1; transform: translateY(0); }
+    .is-visible { opacity: 1; transform: none; }
+  </style>
+</head>
+<body class='bg-gray-100 text-slate-900' style='font-family: Inter, ui-sans-serif, system-ui;'>
+  <!-- Header / Navbar (Glassmorphism) -->
+  <header class='w-full sticky top-0 z-50'>
+    <nav class='glass mx-4 md:mx-8 my-2 rounded-lg shadow-md flex items-center justify-between px-4 py-3' aria-label='Main navigation'>
+      <div class='flex items-center space-x-3'>
+        <span class='text-xl font-bold text-primary' aria-label='Brand'>Café Nova</span>
+      </div>
+      <ul class='hidden md:flex items-center space-x-6'>
+        <li><a href='index.html' class='text-sm text-gray-700 hover:text-primary transition'>Home</a></li>
+        <li><a href='menu.html' class='text-sm text-gray-700 hover:text-primary transition'>Menu</a></li>
+        <li><a href='locations.html' class='text-sm text-gray-700 hover:text-primary transition'>Locations</a></li>
+        <li><a href='about.html' class='text-sm text-gray-700 hover:text-primary transition'>About</a></li>
+        <li><a href='gallery.html' class='text-sm text-gray-700 hover:text-primary transition'>Gallery</a></li>
+        <li><a href='contact.html' class='text-sm text-gray-700 hover:text-primary transition'>Contact</a></li>
+      </ul>
+      <div class='flex items-center space-x-3'>
+        <a href='order.html' class='bg-primary text-white px-4 py-2 rounded-lg hover:scale-105 transition transform'>Order</a>
+        <button aria-label='Open Menu' class='md:hidden bg-white px-3 py-2 rounded-lg border'>Menu</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class='container mx-auto px-4 py-16 text-center'>
+      <div class='max-w-3xl mx-auto'>
+        <h1 class='text-4xl md:text-5xl font-extrabold text-gray-800 mb-4 load-animate is-visible' data-io='true'>Where craft coffee meets community.</h1>
+        <p class='text-lg text-gray-600 mb-6 load-animate is-visible' data-io='true'>Sustainably sourced, expertly brewed, and wonderfully social. Your neighborhood cafe reimagined.</p>
+        <div class='flex flex-wrap justify-center gap-4'>
+          <a href='menu.html' class='bg-primary text-white px-5 py-3 rounded-lg hover:scale-105 transition'>View Menu</a>
+          <a href='order.html' class='bg-white text-primary border border-primary px-5 py-3 rounded-lg hover:shadow-lg hover:scale-105 transition'>Order Online</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specials / New Items -->
+    <section class='container mx-auto px-4 py-12' aria-label='Specials'>
+      <h2 class='text-2xl md:text-3xl font-semibold text-gray-800 mb-6 load-animate is-visible' data-io='true'>This Week's Specials</h2>
+      <div class='grid grid-cols-1 md:grid-cols-3 gap-6'>
+        <article class='glass rounded-xl p-4 shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5'>
+          <div class='h-40 bg-gradient-to-br from-yellow-300 to-orange-400 rounded-lg mb-3'></div>
+          <div class='flex items-center justify-between'>
+            <div>
+              <h3 class='text-lg font-semibold'>Sunrise Turmeric Latte</h3>
+              <p class='text-sm text-gray-600'>Golden milk with espresso and a hint of cinnamon.</p>
+            </div>
+            <span class='font-bold text-gray-800'>$5.50</span>
+          </div>
+        </article>
+        <article class='glass rounded-xl p-4 shadow-md hover:shadow-lg transition'>
+          <div class='h-40 bg-gradient-to-br from-sky-500 to-indigo-500 rounded-lg mb-3'></div>
+          <div class='flex items-center justify-between'>
+            <div>
+              <h3 class='text-lg font-semibold'>Cardamom Pink Drink</h3>
+              <p class='text-sm text-gray-600'>Rose, almond milk, and a whisper of spice.</p>
+            </div>
+            <span class='font-bold text-gray-800'>$4.75</span>
+          </div>
+        </article>
+        <article class='glass rounded-xl p-4 shadow-md hover:shadow-lg transition'>
+          <div class='h-40 bg-gradient-to-br from-green-400 to-teal-500 rounded-lg mb-3'></div>
+          <div class='flex items-center justify-between'>
+            <div>
+              <h3 class='text-lg font-semibold'>Citrus Spark Cold Brew</h3>
+              <p class='text-sm text-gray-600'>Cold brew with orange zest and rosemary.</p>
+            </div>
+            <span class='font-bold text-gray-800'>$4.95</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class='bg-white mt-8 border-t'>
+    <div class='container mx-auto px-4 py-6 text-center text-sm text-gray-500'>© 2025 Café Nova. All rights reserved.</div>
+  </footer>
+
+  <script src='script.js'></script>
+</body>
+</html>
